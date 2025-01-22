@@ -4,7 +4,8 @@
     "rootDir": "./src",
     "outDir": "./dist",
     "module": "nodenext",
-    "moduleResolution": "nodenext"
+    "moduleResolution": "nodenext",
+    "declaration": true
   },
   "include": [
     "src/**/*"
