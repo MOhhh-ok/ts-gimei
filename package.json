@@ -1,0 +1,27 @@
+{
+  "name": "@masa-dev/ts-gimei",
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "0.0.1",
+  "description": "Generate Japanese names",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "data"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "path": "^0.12.7",
+    "fs-extra": "^11.3.0",
+    "yaml": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "tsx": "^4.19.2"
+  }
+}
