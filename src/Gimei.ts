@@ -18,7 +18,6 @@ export class Gimei {
       },
       lastNames: ymlData.last_name.map(parseItem),
     };
-    console.log(this.data);
   }
 
   person(params?: { gender?: Gender }): Person {
