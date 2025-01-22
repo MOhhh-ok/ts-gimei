@@ -7,6 +7,7 @@
   "description": "Generate Japanese names",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": "https://github.com/mohhh-ok/ts-gimei",
   "files": [
     "dist",
     "data"
@@ -24,5 +25,12 @@
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
     "tsx": "^4.19.2"
-  }
+  },
+  "keywords": [
+    "gimei",
+    "japanese",
+    "name",
+    "generator",
+    "faker"
+  ]
 }
