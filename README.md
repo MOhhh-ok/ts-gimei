@@ -1,6 +1,6 @@
 # TS Gimei
 
-TypeScript版、Gimeiです。現在は、名前出力のみです。
+TypeScript版、Gimeiです。日本人の名前、住所をランダムで生成します。
 
 漢字、ひらがな、カタカナ、ローマ字を出力します。
 
