@@ -1,23 +1,4 @@
-# TS Gimei
-
-TypeScript版、Gimeiです。現在は、名前出力のみです。
-
-漢字、ひらがな、カタカナ、ローマ字を出力します。
-
-以下のデータを使用しています。
-
-https://github.com/willnet/gimei
-
-## インストール
-
-```
-npm i @masa-dev/ts-gimei
-```
-
-## 使い方
-
-```typescript
-import { gimei } from '@masa-dev/ts-gimei';
+import { gimei } from './index';
 
 // 男女含めランダム
 console.log(gimei.person());
@@ -95,5 +76,3 @@ console.log(gimei.address());
 //     romaji: 'Wamimachi'
 //   }
 // }
-
-```

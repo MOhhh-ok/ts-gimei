@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Generate Japanese names",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -18,18 +18,19 @@
     "prepublishOnly": "tsc"
   },
   "dependencies": {
-    "path": "^0.12.7",
     "fs-extra": "^11.3.0",
+    "path": "^0.12.7",
     "yaml": "^2.7.0"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
-    "tsx": "^4.19.2"
+    "tsx": "^4.19.3"
   },
   "keywords": [
     "gimei",
     "japanese",
     "name",
+    "address",
     "generator",
     "faker"
   ]
