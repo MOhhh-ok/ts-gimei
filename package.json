@@ -3,8 +3,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.1.1",
-  "description": "Generate Japanese names",
+  "version": "0.1.2",
+  "description": "Generate Japanese names and addresses with kanji, hiragana, katakana, and romaji",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": "https://github.com/mohhh-ok/ts-gimei",
@@ -33,5 +33,6 @@
     "address",
     "generator",
     "faker"
-  ]
+  ],
+  "license": "MIT"
 }
