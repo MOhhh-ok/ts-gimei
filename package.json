@@ -1,10 +1,7 @@
 {
-  "name": "@masa-dev/ts-gimei",
-  "publishConfig": {
-    "access": "public"
-  },
-  "version": "0.1.3",
-  "description": "Generate Japanese names and addresses with kanji, hiragana, katakana, and romaji",
+  "name": "ts-gimei",
+  "version": "0.1.4",
+  "description": "日本語の人物名や住所のテストデータを、漢字・ひらがな・カタカナ・ローマ字で出力します",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": "https://github.com/mohhh-ok/ts-gimei",
