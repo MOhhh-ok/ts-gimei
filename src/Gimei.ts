@@ -22,9 +22,19 @@ export class Gimei {
     const gender = params?.gender ?? getRandomItem(['male', 'female']);
     const firstNames = this.namesData.firstNames[gender];
     const lastNames = this.namesData.lastNames;
+    const firstName = getRandomItem(firstNames);
+    const lastName = getRandomItem(lastNames);
+    const fullName = {
+      kanji: `${lastName.kanji} ${firstName.kanji}`,
+      hiragana: `${lastName.hiragana} ${firstName.hiragana}`,
+      katakana: `${lastName.katakana} ${firstName.katakana}`,
+      romaji: `${lastName.romaji} ${firstName.romaji}`,
+    };
+
     return {
-      firstName: getRandomItem(firstNames),
-      lastName: getRandomItem(lastNames),
+      firstName,
+      lastName,
+      fullName,
       gender,
     };
   }

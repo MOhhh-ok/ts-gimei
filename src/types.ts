@@ -7,20 +7,21 @@ export interface JaVariation {
   romaji: string;
 }
 
-export interface Name extends JaVariation {}
+export interface Name extends JaVariation { }
 export interface Address {
   prefecture: Prefecture;
   city: City;
   town: Town;
 }
 
-export interface Prefecture extends JaVariation {}
-export interface City extends JaVariation {}
-export interface Town extends JaVariation {}
+export interface Prefecture extends JaVariation { }
+export interface City extends JaVariation { }
+export interface Town extends JaVariation { }
 
 export interface Person {
   firstName: Name;
   lastName: Name;
+  fullName: Name;
   gender: Gender;
 }
 
