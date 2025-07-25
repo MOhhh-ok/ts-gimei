@@ -11,7 +11,7 @@ https://github.com/willnet/gimei
 ## インストール
 
 ```
-npm i @masa-dev/ts-gimei
+npm i ts-gimei
 ```
 
 ## 使い方
