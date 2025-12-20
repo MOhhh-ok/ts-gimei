@@ -10,6 +10,7 @@
     "data"
   ],
   "scripts": {
+    "preinstall": "npx only-allow bun",
     "build": "tsc",
     "dev": "tsc --watch",
     "test": "tsx src/test.ts",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
+    "only-allow": "^1.2.2",
     "tsx": "^4.19.3"
   },
   "keywords": [
