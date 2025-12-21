@@ -17,14 +17,14 @@
     "prepublishOnly": "tsc"
   },
   "dependencies": {
-    "fs-extra": "^11.3.0",
+    "fs-extra": "^11.3.3",
     "path": "^0.12.7",
-    "yaml": "^2.7.0"
+    "yaml": "^2.8.2"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
     "only-allow": "^1.2.2",
-    "tsx": "^4.19.3"
+    "tsx": "^4.21.0"
   },
   "keywords": [
     "gimei",
