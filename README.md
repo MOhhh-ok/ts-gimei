@@ -1,8 +1,8 @@
 # TS Gimei
 
-TypeScript版、Gimeiです。日本人の名前、住所をランダムで生成します。
+TypeScript版、Gimeiです。日本人の名前、住所をランダムで生成。漢字、ひらがな、カタカナ、ローマ字を出力します。
 
-漢字、ひらがな、カタカナ、ローマ字を出力します。
+Node.js, ブラウザ両方で使用可能です。
 
 以下のデータを使用しています。
 
@@ -21,15 +21,16 @@ npm i ts-gimei
 人物名をランダムに取得します。
 
 ```typescript
+import gimei from 'ts-gimei';
 
 // 男女含めランダム
-const manOrWoman = gimei.person();
+const manOrWoman = await gimei.person();
 
 // 男性ランダム
-const man = gimei.person({ gender: 'male' });
+const man = await gimei.person({ gender: 'male' });
 
 // 女性ランダム
-const woman = gimei.person({ gender: 'female' });
+const woman = await gimei.person({ gender: 'female' });
 ```
 
 ### 人物名の結果例
@@ -57,8 +58,10 @@ const woman = gimei.person({ gender: 'female' });
 仮の住所をランダムに取得します。
 
 ```typescript
+import gimei from 'ts-gimei';
+
 // 住所ランダム
-const address = gimei.address();
+const address = await gimei.address();
 ```
 
 ### 住所の結果例
