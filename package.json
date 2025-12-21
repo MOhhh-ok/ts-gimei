@@ -14,7 +14,7 @@
     "preinstall": "npx only-allow bun",
     "generate": "bun scripts/generate.ts",
     "test": "bun src/test.ts",
-    "prepublishOnly": "tsc"
+    "prepublishOnly": "bun run build"
   },
   "dependencies": {},
   "devDependencies": {
