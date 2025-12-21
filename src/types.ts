@@ -1,28 +1,28 @@
-export type Gender = 'male' | 'female';
+export type Gender = "male" | "female";
 
-export interface JaVariation {
+export interface JapaneseNotation {
   kanji: string;
   hiragana: string;
   katakana: string;
   romaji: string;
 }
 
-export interface Name extends JaVariation { }
-export interface Address {
-  prefecture: Prefecture;
-  city: City;
-  town: Town;
-}
-
-export interface Prefecture extends JaVariation { }
-export interface City extends JaVariation { }
-export interface Town extends JaVariation { }
+export interface Name extends JapaneseNotation {}
+export interface Prefecture extends JapaneseNotation {}
+export interface City extends JapaneseNotation {}
+export interface Town extends JapaneseNotation {}
 
 export interface Person {
   firstName: Name;
   lastName: Name;
   fullName: Name;
   gender: Gender;
+}
+
+export interface Address {
+  prefecture: Prefecture;
+  city: City;
+  town: Town;
 }
 
 export interface NamesData {

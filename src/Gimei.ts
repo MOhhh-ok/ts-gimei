@@ -1,25 +1,13 @@
-import fs from 'fs-extra';
-import path from 'path';
-import { parse } from 'yaml';
-import {
-  Gender,
-  Name,
-  NamesData,
-  NamesYamlData,
-  Person,
-  AddressesData,
-  JaVariation,
-  AddressesYamlData,
-  Address,
-} from './types';
+import { Address, AddressesData, Gender, NamesData, Person } from "./types";
+import { getRandomItem } from "./utils";
 
 export class Gimei {
   private namesData: NamesData | undefined;
   private addressesData: AddressesData | undefined;
 
-  person(params?: { gender?: Gender }): Person {
-    if (!this.namesData) this.loadNamesData();
-    const gender = params?.gender ?? getRandomItem(['male', 'female']);
+  async person(params?: { gender?: Gender }): Promise<Person> {
+    await this.ensureNamesData();
+    const gender = params?.gender ?? getRandomItem(["male", "female"]);
     const firstNames = this.namesData.firstNames[gender];
     const lastNames = this.namesData.lastNames;
     const firstName = getRandomItem(firstNames);
@@ -39,49 +27,23 @@ export class Gimei {
     };
   }
 
-  address(): Address {
-    if (!this.addressesData) this.loadAddressesData();
+  async address(): Promise<Address> {
+    await this.ensureAddressesData();
     const prefecture = getRandomItem(this.addressesData.prefecture);
     const city = getRandomItem(this.addressesData.city);
     const town = getRandomItem(this.addressesData.town);
     return { prefecture, city, town };
   }
 
-  private loadNamesData() {
-    const _path = path.join(__dirname, '..', 'data', 'names.yml');
-    const str = fs.readFileSync(_path, 'utf8');
-    const ymlData: NamesYamlData = parse(str);
-    this.namesData = {
-      firstNames: {
-        male: ymlData.first_name.male.map(parseItem),
-        female: ymlData.first_name.female.map(parseItem),
-      },
-      lastNames: ymlData.last_name.map(parseItem),
-    };
+  private async ensureNamesData() {
+    if (this.namesData) return;
+    const data = await import("../generated/names.json");
+    this.namesData = data.default;
   }
 
-  private loadAddressesData() {
-    const _path = path.join(__dirname, '..', 'data', 'addresses.yml');
-    const str = fs.readFileSync(_path, 'utf8');
-    const ymlData: AddressesYamlData = parse(str);
-    this.addressesData = {
-      prefecture: ymlData.addresses.prefecture.map(parseItem),
-      city: ymlData.addresses.city.map(parseItem),
-      town: ymlData.addresses.town.map(parseItem),
-    };
+  private async ensureAddressesData() {
+    if (this.addressesData) return;
+    const data = await import("../generated/addresses.json");
+    this.addressesData = data.default;
   }
-}
-
-function parseItem(item: string[]): JaVariation {
-  const [kanji, hiragana, katakana, romaji] = item;
-  return {
-    kanji,
-    hiragana,
-    katakana,
-    romaji,
-  };
-}
-
-function getRandomItem<T>(array: T[]): T {
-  return array[Math.floor(Math.random() * array.length)];
 }

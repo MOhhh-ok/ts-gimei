@@ -1,18 +1,22 @@
-import { gimei } from "./index";
+import { gimei } from ".";
 
-// 男女含めランダム
-const manOrWoman = gimei.person();
+async function test() {
+  // 男女含めランダム
+  const manOrWoman = await gimei.person();
 
-// 男性ランダム
-const man = gimei.person({ gender: "male" });
+  // 男性ランダム
+  const man = await gimei.person({ gender: "male" });
 
-// 女性ランダム
-const woman = gimei.person({ gender: "female" });
+  // 女性ランダム
+  const woman = await gimei.person({ gender: "female" });
 
-// 住所ランダム
-const address = gimei.address();
+  // 住所ランダム
+  const address = await gimei.address();
 
-console.log({ manOrWoman });
-console.log({ man });
-console.log({ woman });
-console.log({ address });
+  console.log({ manOrWoman });
+  console.log({ man });
+  console.log({ woman });
+  console.log({ address });
+}
+
+test();

@@ -5,7 +5,8 @@
     "outDir": "./dist",
     "module": "nodenext",
     "moduleResolution": "nodenext",
-    "declaration": true
+    "declaration": true,
+    "resolveJsonModule": true
   },
   "include": [
     "src/**/*"
