@@ -1,4 +1,4 @@
-import { gimei } from ".";
+import gimei from ".";
 
 async function test() {
   // 男女含めランダム
