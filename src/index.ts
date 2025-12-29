@@ -1,4 +1,4 @@
-import { Gimei } from "./Gimei";
+import { Gimei } from "./Gimei.js";
 
 const gimei = new Gimei();
 

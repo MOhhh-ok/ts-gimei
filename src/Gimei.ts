@@ -1,5 +1,5 @@
-import { Address, AddressesData, Gender, NamesData, Person } from "./types";
-import { getRandomItem } from "./utils";
+import { Address, AddressesData, Gender, NamesData, Person } from "./types.js";
+import { getRandomItem } from "./utils.js";
 
 export class Gimei {
   private namesData: NamesData | undefined;
